@@ -165,11 +165,13 @@
 
         <thead>
         <tr>
-                            <th scope="col">ID</th>
+            <th scope="col">ID</th>
             <th scope="col">Name</th>
             <th scope="col">Author</th>
             <th scope="col">Price</th>
             <th scope="col">Action</th>
+<!--            <a style="color:red" th:href="@{/editBook/{id}(id=${b.id})}"><i class="fa-solid fa-pen-to-square ms-4"></i></a>-->
+
         </tr>
         </thead>
         <tbody>
@@ -179,6 +181,8 @@
                     <td th:text="${b.name}"></td>
                     <td th:text="${b.author}"></td>
                     <td th:text="${b.price}"></td>
+                    <td>            <a style="color:blue" th:href="@{/deleteBook/{id}(id=${b.id})}"><i class="fa-solid fa-trash ms-4"></i></a>
+                    </td>
 <!--                    <td><a class="btn btn-secondary btn-sm"> Add To MyBook</a> </td>-->
                 </tr>
                     <tr>
